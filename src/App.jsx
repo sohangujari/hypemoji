@@ -5,7 +5,7 @@ const simpleHash = (text) => {
   let hash = 0;
   for (let i = 0; i < text.length; i++) {
     hash = (hash << 5) - hash + text.charCodeAt(i);
-    hash |= 0; // Convert to 32bit integer
+    hash |= 0;
   }
   return hash;
 };
@@ -29,7 +29,7 @@ const textToEmoji = (text) => {
   return emojiSequence.join(' ');
 };
 
-const HashToEmoji = () => {
+const App = () => {
   const [inputText, setInputText] = useState('');
   const [emojiSequence, setEmojiSequence] = useState('');
 
@@ -38,7 +38,8 @@ const HashToEmoji = () => {
     setInputText(text);
     setEmojiSequence(textToEmoji(text));
   };
-
+console.log("emojiSequence-",emojiSequence);
+console.log("inputText-",inputText);
   return (
     <div className="text-center mt-12">
       <h1>Hash to Emoji Converter</h1>
@@ -56,14 +57,6 @@ const HashToEmoji = () => {
           </>
         )}
       </div>
-    </div>
-  );
-};
-
-const App = () => {
-  return (
-    <div>
-      <HashToEmoji />
     </div>
   );
 };
