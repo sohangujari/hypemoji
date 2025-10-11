@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import QRCode from "qrcode";
 import { HugeiconsIcon } from '@hugeicons/react';
 import { ShuffleIcon,QrCodeIcon,Download01Icon,Share03Icon } from '@hugeicons/core-free-icons';
-import Logo from './assets/3d-eye.png';
+import Logo from './assets/hypemoji-logo.png';
 
 const API_BASE = "https://hypemoji-api.vercel.app";
 
@@ -480,7 +480,7 @@ function EncryptView() {
               className="pr-10"
             />
             <div className="absolute right-2 top-1/2 -translate-y-1/2">
-              <IconButton title="Generate random key (6–8 digits)" onClick={onRandomKey}>
+              <IconButton title="Generate random key (1–4 digits)" onClick={onRandomKey}>
                 <HugeiconsIcon
                   icon={ShuffleIcon}
                   size={16}
@@ -866,7 +866,7 @@ export default function App() {
     <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4">
       <div className="mb-8 text-center transition-all duration-300">
         <img src={Logo} width="100px" className="mx-auto" alt="Hypemoji" />
-        <div className="text-2xl font-semibold tracking-tight">Hypemoji</div>
+        <h1 className="text-2xl font-semibold tracking-tight">Hypemoji</h1>
         <div className="text-sm text-white/50 mt-1">
           Encrypt text ↔ emoji with a numeric key
         </div>
